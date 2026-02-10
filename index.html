@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BAPINA Jessica Aniela Yidinpin - CV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;600;700&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap');
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'IBM Plex Sans', sans-serif;
+            background: #f5f5f5;
+            padding: 40px 20px;
+            line-height: 1.6;
+            color: #000;
+        }
+
+        .container {
+            max-width: 850px;
+            margin: 0 auto;
+            background: white;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 40px 25px;
+            background: white;
+            color: #000;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid #f0f0f0;
+        }
+
+        header::before {
+            content: none;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        h1 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 2.2em;
+            font-weight: 700;
+            margin-bottom: 12px;
+            position: relative;
+            letter-spacing: 0;
+            color: #000;
+        }
+
+        .contact-info {
+            font-size: 0.88em;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            opacity: 1;
+            color: #000;
+        }
+
+        .contact-info span {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .contact-info i {
+            font-size: 1.1em;
+            width: 16px;
+            text-align: center;
+        }
+
+        .contact-info a {
+            color: #000;
+            text-decoration: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .contact-info a:hover {
+            opacity: 0.7;
+        }
+
+        .contact-info span::before {
+            content: none;
+        }
+
+        .content {
+            padding: 40px 50px;
+        }
+
+        section {
+            margin-bottom: 25px;
+        }
+
+        section:nth-child(1) { }
+        section:nth-child(2) { }
+        section:nth-child(3) { }
+        section:nth-child(4) { }
+        section:nth-child(5) { }
+        section:nth-child(6) { }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        h2 {
+            font-family: 'IBM Plex Sans', sans-serif;
+            font-size: 1em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #000;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
+            margin-top: 30px;
+            color: #000;
+        }
+
+        .about-text {
+            line-height: 1.6;
+            font-size: 0.95em;
+            color: #000;
+            text-align: justify;
+        }
+
+        .job, .project {
+            margin-bottom: 25px;
+            padding-left: 0;
+            border-left: none;
+        }
+
+        .job-header, .project-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 5px;
+            flex-wrap: nowrap;
+            gap: 20px;
+        }
+
+        .job-left, .edu-left {
+            flex: 1;
+        }
+
+        .job-title, .project-title {
+            font-weight: 700;
+            font-size: 1em;
+            color: #000;
+            flex: 1;
+        }
+
+        .job-company, .project-company {
+            font-style: italic;
+            color: #000;
+            font-size: 0.95em;
+            margin-top: 3px;
+            font-weight: 400;
+        }
+
+        .job-date, .project-date {
+            font-size: 0.9em;
+            color: #000;
+            white-space: nowrap;
+            font-weight: 400;
+            text-align: right;
+            flex-shrink: 0;
+        }
+
+        .location {
+            font-size: 0.9em;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        li {
+            position: relative;
+            padding-left: 0;
+            margin-bottom: 6px;
+            font-size: 0.95em;
+            line-height: 1.5;
+            list-style-type: disc;
+            margin-left: 20px;
+        }
+
+        li::before {
+            content: none;
+        }
+
+        strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .education-item {
+            margin-bottom: 20px;
+        }
+
+        .degree {
+            font-weight: 700;
+            font-size: 1em;
+            color: #000;
+            margin-bottom: 0;
+            flex: 1;
+        }
+
+        .school {
+            font-style: italic;
+            color: #000;
+            margin-bottom: 8px;
+            font-weight: 400;
+            margin-top: 3px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 12px;
+        }
+
+        .skill-category {
+            display: flex;
+            gap: 10px;
+        }
+
+        .skill-label {
+            font-weight: 600;
+            color: #2c3e50;
+            min-width: 100px;
+        }
+
+        .skill-items {
+            color: #555;
+        }
+
+        a {
+            color: #000;
+            text-decoration: underline;
+            transition: opacity 0.3s ease;
+        }
+
+        a::after {
+            content: none;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .contact-info {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .job-header, .project-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+            body {
+                background: white;
+                padding: 0;
+            }
+
+            .container {
+                box-shadow: none;
+            }
+
+            header {
+                background: #667eea;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>BAPINA Jessica Aniela Yidinpin</h1>
+            <div class="contact-info">
+                <span><i class="fas fa-phone"></i> +226 70990355 / 07267323</span>
+                <span><i class="fas fa-envelope"></i> <a href="mailto:jessicabapina@gmail.com">jessicabapina@gmail.com</a></span>
+                <span><i class="fab fa-github"></i> <a href="https://github.com/jessicabapina" target="_blank">github.com/jessicabapina</a></span>
+                <span><i class="fab fa-linkedin"></i> <a href="http://linkedin.com/in/jessica-bapina-3a2a70357" target="_blank">linkedin.com/in/jessicabapina</a></span>
+                <span><i class="fas fa-map-marker-alt"></i> Ouagadougou, Burkina-Faso</span>
+            </div>
+        </header>
+
+        <div class="content">
+            <section>
+                <h2>À Propos de Moi</h2>
+                <p class="about-text">
+                    Étudiante motivée en développement web, avec des bases solides en conception de pages web et en programmation. Passionnée par les technologies numériques et l'innovation, je souhaite contribuer à la création de solutions web efficaces et modernes. Je dispose d'une bonne capacité d'adaptation, de travail en équipe et d'apprentissage rapide.
+                </p>
+            </section>
+
+            <section>
+                <h2>Formations Académiques</h2>
+                
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="degree">Institut Supérieur de Génie Électrique du Burkina Faso (ISGE-BF)</div>
+                        <div class="job-date">Oct. 2024 – 2027</div>
+                    </div>
+                    <div class="school">Diplôme d'Ingénieur de Conception en Informatiques, Réseaux et Télécommunications</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="degree">Institut Supérieur de Génie Électrique du Burkina Faso (ISGE-BF)</div>
+                        <div class="job-date">Oct. 2022 – Sept. 2024</div>
+                    </div>
+                    <div class="school">Diplôme de Technicien Supérieur en Réseaux, Informatiques et Télécommunications</div>
+                </div>
+
+                <div class="education-item">
+                    <div class="job-header">
+                        <div class="degree">Lycée Notre Dame des Victoires</div>
+                        <div class="job-date">2022</div>
+                    </div>
+                    <div class="school">Baccalauréat série D</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Expériences</h2>
+                
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">MOOV-AFRICA</div>
+                        <div class="job-date">Mai. 2024 – Juil. 2024</div>
+                    </div>
+                    <div class="job-company">Stagiaire technicienne supérieur</div>
+                </div>
+
+                <div class="job">
+                    <div class="job-header">
+                        <div class="job-title">PHONE SERVIVE</div>
+                        <div class="job-date">Fev. 2024 – Mars. 2024</div>
+                    </div>
+                    <div class="job-company">Entreprise sous-traitante de Orange-Burkina, spécialisée dans l'installation de la fibre optique à domicile</div>
+                    <div class="job-company" style="margin-top: 5px;">Stagiaire ouvrière</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>Projets</h2>
+                
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Application de gestion d'évènement</div>
+                        <div class="project-date">2025</div>
+                    </div>
+                    <div class="project-company">Analyse des besoins, conception du design, implémentation.</div>
+                </div>
+
+                <div class="project">
+                    <div class="project-header">
+                        <div class="project-title">Interrupteur crépusculaire avec alimentation sans transformateur</div>
+                        <div class="project-date">2025</div>
+                    </div>
+                    <div class="project-company">Etude théorique des composants et du montage, réalisation pratique</div>
+                </div>
+            </section>
+
+            <section>
+                <h2>ExtraSColaire</h2>
+                
+                <ul>
+                    <li>Langages de programmation: C, Java. </li>
+                    <li>Langages web: HTML, CSS, JavaScript. </li>
+                    <li>Logiciels: Visual Studio Code, Notepad++.</li>
+                    <li>Office: Word, Excel, PowerPoint.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Langues</h2>
+                
+                <ul>
+                    <li>Français: courant</li>
+                    <li>Anglais: intermédiaire</li>
+                </ul> 
+            </section>
+        </div>
+    </div>
+</body>
+</html>
